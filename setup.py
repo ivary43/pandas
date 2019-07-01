@@ -45,7 +45,7 @@ except ImportError:
     _have_setuptools = False
 
 setuptools_kwargs = {}
-min_numpy_ver = '1.7.0'
+min_numpy_ver = '1.16.4'
 if sys.version_info[0] >= 3:
 
     setuptools_kwargs = {
@@ -63,8 +63,8 @@ else:
     setuptools_kwargs = {
         'install_requires': ['python-dateutil',
                             'pytz >= 2011k',
-                             'numpy >= %s' % min_numpy_ver],
-        'setup_requires': ['numpy >= %s' % min_numpy_ver],
+                             'numpy == %s' % min_numpy_ver],
+        'setup_requires': ['numpy == %s' % min_numpy_ver],
         'zip_safe': False,
     }
 
